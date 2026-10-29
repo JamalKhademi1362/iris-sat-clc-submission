@@ -37,8 +37,8 @@ REQUIRED_SOURCE_FIELDS = {
     "geometry",
 }
 
-# These are the codes observed in the verified PU131 sample. Labels remain
-# unset until an authoritative versioned mapping is verified.
+# Codes observed in the verified PU131 sample; authoritative CLCplus
+# Backbone 2018 class labels are defined below.
 OBSERVED_LC_CODES = {21, 22, 31, 32, 33, 40, 51, 52, 53, 60, 100}
 CLC_VECTOR_CLASS_LABELS = {
     11: "Very High Sealing Degree",
