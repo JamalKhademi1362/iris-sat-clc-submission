@@ -1,0 +1,42 @@
+services:
+  clc-postgis:
+    image: postgis/postgis:17-3.5@sha256:01a6a70e41e6c4467c8f55f6063555ed72db2d6662cd0d571040d42eadaeb6f6
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?POSTGRES_DB is required}
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER is required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    expose:
+      - "5432"
+    volumes:
+      - clc-postgres-data:/var/lib/postgresql/data
+    networks:
+      - clc-isolated
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+      start_period: 10s
+
+  clc-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.clc
+    image: ${CLC_APP_IMAGE:-iris-clc-assignment-app:local}
+    environment:
+      CLC_DATABASE_URL: postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@clc-postgis:5432/${POSTGRES_DB}
+    depends_on:
+      clc-postgis:
+        condition: service_healthy
+    volumes:
+      - clc-reports:/workspace/reports
+    networks:
+      - clc-isolated
+
+networks:
+  clc-isolated:
+
+volumes:
+  clc-postgres-data:
+  clc-reports:

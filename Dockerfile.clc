@@ -1,0 +1,25 @@
+FROM python:3.12.12-slim-bookworm
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1
+
+WORKDIR /workspace
+
+COPY requirements-clc.lock ./
+RUN python -m pip install --upgrade "pip==25.2" \
+    && python -m pip install --requirement requirements-clc.lock
+
+COPY alembic_staging.ini ./
+COPY alembic_staging ./alembic_staging
+COPY app ./app
+COPY tests ./tests
+
+RUN useradd --create-home --uid 10001 clc \
+    && mkdir -p /workspace/reports/clc_runs \
+    && chown -R clc:clc /workspace
+
+USER clc
+
+CMD ["python", "-m", "pytest", "-q"]

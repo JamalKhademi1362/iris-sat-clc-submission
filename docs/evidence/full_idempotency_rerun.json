@@ -1,0 +1,89 @@
+{
+
+  "batch_size": 20000,
+
+  "batch_transaction_model": "atomic_per_batch_idempotent_rerun",
+
+  "batches_committed": 71,
+
+  "batches_read": 71,
+
+  "counts": {
+
+    "accepted": 1413448,
+
+    "committed": 0,
+
+    "conflicting": 0,
+
+    "duplicate": 0,
+
+    "features_read": 1413448,
+
+    "geometry_area_rejected": 0,
+
+    "input": 1413448,
+
+    "inserted": 0,
+
+    "nodata": 0,
+
+    "rejected": 0,
+
+    "rolled_back": 0,
+
+    "unchanged": 1413448,
+
+    "unknown_code": 0,
+
+    "valid": 1413448,
+
+    "written": 0
+
+  },
+
+  "destination_row_count": 1413448,
+
+  "elapsed_seconds": 4127.152891,
+
+  "errors": [],
+
+  "finished_at": "2026-10-28T23:59:09.947311+00:00",
+
+  "input_file": "CLMS_CLCplus_VECTOR_2018_PU131_03035_V1_1.gpkg",
+
+  "input_sha256": "51cf62a809c0421b8c5dc5d25e524bcde5fa83b4934fb5393de7c6ee6b47e204",
+
+  "memory": {
+
+    "rss_after_bytes": 475385856,
+
+    "rss_before_bytes": 137183232,
+
+    "rss_peak_bytes": 477564928
+
+  },
+
+  "outcome": "success",
+
+  "partial_commits": false,
+
+  "rejection_reason_counts": {},
+
+  "rejection_report_path": "reports/official_full/18c77074-b979-423a-b2d4-f7cfe8730d7d.rejections.jsonl",
+
+  "report_path": "reports/official_full/18c77074-b979-423a-b2d4-f7cfe8730d7d.json",
+
+  "run_id": "18c77074-b979-423a-b2d4-f7cfe8730d7d",
+
+  "source_feature_count_expected": 1413448,
+
+  "source_layer": "CLMS_CLCplus_VECTOR_2018_PU131_03035_V1_0",
+
+  "started_at": "2026-10-28T22:50:23.181934+00:00",
+
+  "transaction_committed": true,
+
+  "transaction_rolled_back": false
+
+}

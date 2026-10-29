@@ -1,0 +1,34 @@
+.env.clc.local
+.env.clc.*.local
+.env.clms.local
+.env.clms.*.local
+.secrets/
+downloads/clms/
+.venv-clc/
+.pytest_cache/
+__pycache__/
+*.pyc
+# Temporary/generated reports
+reports/
+
+# Tool/build caches
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+# Raw local reference downloads
+CLC-BB_User_Manual_I3-0.pdf
+d45d5114-fb86-4265-9c5a-a7225a511f7c.xml
+metadata-d45d5114-fb86-4265-9c5a-a7225a511f7c.pdf
+
+# Internal development notes
+AGENTS.md
+docs/CODEX_HANDOFF_FULL_INGESTION.md
+docs/RUN_LOG.md
+docs/OPEN_ISSUES.md
+docs/ROADMAP.md
+docs/IMPLEMENTATION_DESIGN.md
+docs/DEPENDENCIES.md
+docs/DECISIONS.md
+docs/README.md

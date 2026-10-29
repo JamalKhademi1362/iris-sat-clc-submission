@@ -1,0 +1,111 @@
+{
+  "analysis_crs": "EPSG:3035",
+  "candidate_count": 362,
+  "classes": [
+    {
+      "class_label": "Very High Sealing Degree",
+      "class_label_status": "stored",
+      "intersection_area_ha": 119.47972798575472,
+      "intersection_area_m2": 1194797.2798575473,
+      "lc_code18": 11,
+      "roi_percentage": 29.86993199643868
+    },
+    {
+      "class_label": "High Sealing Degree",
+      "class_label_status": "stored",
+      "intersection_area_ha": 53.31405627109918,
+      "intersection_area_m2": 533140.5627109918,
+      "lc_code18": 12,
+      "roi_percentage": 13.328514067774796
+    },
+    {
+      "class_label": "Pure needle leaved",
+      "class_label_status": "stored",
+      "intersection_area_ha": 0.7532679517608136,
+      "intersection_area_m2": 7532.679517608136,
+      "lc_code18": 21,
+      "roi_percentage": 0.18831698794020338
+    },
+    {
+      "class_label": "Dominantly needle leaved",
+      "class_label_status": "stored",
+      "intersection_area_ha": 2.0361647954101927,
+      "intersection_area_m2": 20361.64795410193,
+      "lc_code18": 22,
+      "roi_percentage": 0.5090411988525483
+    },
+    {
+      "class_label": "Pure broadleaved deciduous",
+      "class_label_status": "stored",
+      "intersection_area_ha": 169.63722079500795,
+      "intersection_area_m2": 1696372.2079500796,
+      "lc_code18": 31,
+      "roi_percentage": 42.40930519875199
+    },
+    {
+      "class_label": "Dominantly broad leave",
+      "class_label_status": "stored",
+      "intersection_area_ha": 8.902301580932596,
+      "intersection_area_m2": 89023.01580932595,
+      "lc_code18": 33,
+      "roi_percentage": 2.225575395233149
+    },
+    {
+      "class_label": "Permanent herbaceous without trees",
+      "class_label_status": "stored",
+      "intersection_area_ha": 1.9211845970690251,
+      "intersection_area_m2": 19211.84597069025,
+      "lc_code18": 51,
+      "roi_percentage": 0.4802961492672563
+    },
+    {
+      "class_label": "Permanent herbaceous with few trees",
+      "class_label_status": "stored",
+      "intersection_area_ha": 7.302206841335853,
+      "intersection_area_m2": 73022.06841335853,
+      "lc_code18": 52,
+      "roi_percentage": 1.8255517103339634
+    },
+    {
+      "class_label": "Permanent herbaceous with many trees",
+      "class_label_status": "stored",
+      "intersection_area_ha": 19.454867610279877,
+      "intersection_area_m2": 194548.67610279875,
+      "lc_code18": 53,
+      "roi_percentage": 4.863716902569968
+    },
+    {
+      "class_label": "Partly vegetated land - Intermediate vegetation cover",
+      "class_label_status": "stored",
+      "intersection_area_ha": 0.4716310547687908,
+      "intersection_area_m2": 4716.310547687908,
+      "lc_code18": 82,
+      "roi_percentage": 0.11790776369219771
+    },
+    {
+      "class_label": "Water",
+      "class_label_status": "stored",
+      "intersection_area_ha": 16.72737051658102,
+      "intersection_area_m2": 167273.70516581018,
+      "lc_code18": 100,
+      "roi_percentage": 4.181842629145255
+    }
+  ],
+  "coverage_percentage": 99.99999999999999,
+  "covered_area_ha": 399.99999999999994,
+  "covered_area_m2": 3999999.9999999995,
+  "elapsed_seconds": 2.085635,
+  "input_crs": "EPSG:3035",
+  "label_note": "Stored labels are preferred; otherwise the verified CLCplus Vector mapping is applied for documented codes. LC_code18 is always preserved.",
+  "overlap_excess_m2": -1.3969838619232178e-09,
+  "package_version": "V1_1",
+  "positive_intersection_count": 362,
+  "roi_area_ha": 400.0,
+  "roi_area_m2": 4000000.0,
+  "roi_wkt_analysis_crs": "POLYGON ((4140000 2441000, 4142000 2441000, 4142000 2443000, 4140000 2443000, 4140000 2441000))",
+  "semantic_note": "Statistics describe assigned vector polygon classes for the 2018 reference product, not exact current ground cover. No sub-polygon cover fraction is estimated.",
+  "source_product": "CLCplus Backbone 2018",
+  "summed_intersection_area_m2": 3999999.999999998,
+  "uncovered_area_ha": 4.656612873077393e-14,
+  "uncovered_area_m2": 4.656612873077393e-10
+}
