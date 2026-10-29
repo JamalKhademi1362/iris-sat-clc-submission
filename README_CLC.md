@@ -44,7 +44,7 @@ This submission is configured by default for the verified PU131 official release
 
 ### Source attribution and thematic uncertainty
 
-The official CLMS dataset page lists **95% overall thematic accuracy** for the CLCplus Backbone 2018 vector product. The Product User Manual provides more nuance: its internal thematic assessment reports `91.1% ± 0.4%` overall accuracy for the decisive plausibility-analysis validation stage and explicitly notes that this does not fully meet the specified 95% overall-accuracy target. For downstream GIS/EO use, the product should therefore be treated as a high-quality 2018 reference classification with documented uncertainty rather than exact current ground truth.
+The official CLMS dataset page lists **95% overall thematic accuracy** for the CLCplus Backbone 2018 vector product. The Product User Manual provides more nuance: for the full EEA38+UK product, the blind-analysis validation stage reports approximately `63.2% ± 0.6%`, while the subsequent plausibility-analysis validation stage reports approximately `91.1% ± 0.4%`, against a 95% target. These figures are not specific to PU131 (CH-IT). For downstream GIS/EO use, the product should therefore be treated as a classified 2018 land-cover reference product with documented uncertainty rather than as a precise measurement of current ground cover.
 
 For derived products or services, CLMS data policy recommends the attribution:
 
@@ -89,7 +89,7 @@ cp .env.clc.example .env.clc.local
 
 The second fixture load is the idempotency check.
 
-> **Fixture ROI note:** the included 1,058-feature fixture is intentionally a small, incomplete subset of the official package. On a fixture-only database, the fixed ROI returns `164` positive-area intersections and about `56.683646%` coverage. Against the complete official ingestion, the same ROI returns `362` intersections and effectively `100%` coverage. The full-data evidence is documented below and in `docs/evidence/roi_full.json`.
+> **Fixture ROI note:** the included 1,058-feature fixture is intentionally a small, incomplete subset of the official package. On a fixture-only database, the fixed ROI returns `164` positive-area intersections and about `56.683646%` coverage. The missing coverage is explained by the fixture export containing no polygons from classes `11`, `12`, and `82`; in the full official load, those classes account for the missing `1,732,654 m²`. Against the complete official ingestion, the same ROI returns `362` intersections and effectively `100%` coverage. The full-data evidence is documented below and in `docs/evidence/roi_full.json`.
 
 When finished:
 
@@ -224,7 +224,7 @@ This limitation affects **automated acquisition only**. Parsing, validation, bou
 
 - CLCplus Backbone 2018 represents a 2018 reference classification product; it is not a current land-use survey.
 - The vector classification should not be interpreted as exact sub-polygon fractional cover.
-- The official product page lists 95% overall thematic accuracy, while the Product User Manual's internal decisive validation stage reports `91.1% ± 0.4%`; downstream use should preserve that uncertainty context.
+- The official product page lists 95% overall thematic accuracy. The Product User Manual reports two validation stages for the full EEA38+UK product: approximately `63.2% ± 0.6%` for blind analysis and `91.1% ± 0.4%` for plausibility analysis, against the 95% target; these figures are not PU131-specific.
 - Polygon / GeometryCollection source normalization and source reprojection are intentionally unsupported by the strict ingestion contract.
 - Cross-release uniqueness relies on the source-system identity combined with product/package/site/source identifiers.
 - The local SHA-256 values prove local byte identity, not publisher authenticity.
